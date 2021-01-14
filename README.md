@@ -1,5 +1,8 @@
 free, open source, lightweight and beutiful GUI for vpn usage
-this Project is part of my #100DaysOfCode challenge in twitter : [@My_Terminal][https://twitter.com/My_Terminal]
+this Project is part of my #100DaysOfCode challenge in twitter : [@My_Terminal](https://twitter.com/My_Terminal)
 
 
 ### This project is not completed yet  , so wait for upcoming commits and updates
+
+#### you can watch a preview of code here:
+![MoVPN Client](https://github.com/momhiar/MoVPN-JavaFX-PC-Client/blob/master/Day6.gif?raw=true)
