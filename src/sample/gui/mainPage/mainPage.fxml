@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="457.0" prefWidth="743.0" stylesheets="@../../stylesheets/mainDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.mainPageController">
+   <children>
+      <AnchorPane fx:id="topAnchor" layoutY="-1.0" prefHeight="31.0" prefWidth="738.0" styleClass="top-anchor">
+         <children>
+            <AnchorPane fx:id="closeButton" layoutX="706.0" prefHeight="31.0" prefWidth="37.0" styleClass="close-button-anchor">
+               <children>
+                  <MaterialIconView glyphName="CLOSE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="minimizeButton" layoutX="670.0" prefHeight="31.0" prefWidth="37.0" styleClass="minimize-button-anchor">
+               <children>
+                  <MaterialIconView glyphName="REMOVE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="-2.0" layoutY="29.0" prefHeight="429.0" prefWidth="283.0" style="-fx-background-color: #ff0;" styleClass="LeftVBox">
+         <children>
+            <AnchorPane prefHeight="202.0" prefWidth="238.0" styleClass="LeftVBoxTop">
+               <children>
+                  <AnchorPane layoutX="32.0" layoutY="41.0" prefHeight="25.0" prefWidth="144.0">
+                     <children>
+                        <MaterialIconView glyphName="WARNING" layoutX="9.0" layoutY="20.0" size="15" styleClass="warningIcon" />
+                        <Label layoutX="26.0" layoutY="4.0" text="You are not Connected" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton id="fx-button" fx:id="quickConnectButton" layoutX="25.0" layoutY="131.0" prefHeight="37.0" prefWidth="233.0" text="Quick Connect" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="login-button" />
+                        <String fx:value="button" />
+                     </styleClass>
+                  </JFXButton>
+                  <Label layoutX="47.0" layoutY="73.0" prefHeight="18.0" prefWidth="129.0" text="IP: 127.0.0.1" textFill="#d3cccc" />
+               </children></AnchorPane>
+            <AnchorPane prefHeight="180.0" prefWidth="283.0" styleClass="LeftVBoxBottom">
+               <children>
+                  <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="61.0" prefWidth="283.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
+                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
+                        <JFXButton id="fx-button" fx:id="loginButton1" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="login-button" />
+                              <String fx:value="button" />
+                           </styleClass>
+                        </JFXButton>
+                        <Line endX="138.5" layoutX="104.0" layoutY="62.0" startX="-104.0" stroke="#1e1e1e" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="-1.0" layoutY="61.0" prefHeight="61.0" prefWidth="283.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
+                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
+                        <JFXButton id="fx-button" fx:id="loginButton11" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="login-button" />
+                              <String fx:value="button" />
+                           </styleClass>
+                        </JFXButton>
+                        <Line endX="138.5" layoutX="104.0" layoutY="62.0" startX="-104.0" stroke="#1e1e1e" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="-1.0" layoutY="125.0" prefHeight="102.0" prefWidth="283.0">
+                     <children>
+                        <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
+                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
+                        <JFXButton id="fx-button" fx:id="loginButton12" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="login-button" />
+                              <String fx:value="button" />
+                           </styleClass>
+                        </JFXButton>
+                        <Line endX="138.5" layoutX="104.0" layoutY="62.0" startX="-104.0" stroke="#1e1e1e" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="281.0" layoutY="29.0" prefHeight="429.0" prefWidth="459.0">
+         <children>
+            <ImageView fx:id="statusImage" fitHeight="159.0" fitWidth="210.0" layoutX="183.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/disconnected.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="149.0" layoutY="293.0" text="You are not connected">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXButton id="fx-button" fx:id="quickConnectButton1" layoutX="173.0" layoutY="239.0" prefHeight="37.0" prefWidth="178.0" text="Quick Connect" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="login-button" />
+                  <String fx:value="button" />
+               </styleClass>
+            </JFXButton>
+            <JFXNodesList layoutX="72.0" layoutY="94.0" prefHeight="15.0" prefWidth="37.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

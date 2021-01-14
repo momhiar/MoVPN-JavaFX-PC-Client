@@ -1,0 +1,65 @@
+
+*{
+    -fx-primary: #2A2E37;
+    -fx-secondary: #FFFF0D;
+    -fx-primarytext: #B2B2B2;
+    -fx-text-fill: -fx-primarytext;
+
+
+}
+
+.root{
+
+    -fx-background-color: -fx-primary;
+}
+
+.glyph-icon{
+    -fx-fill: -fx-primarytext;
+}
+.button{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-cursor: hand;
+}
+.login-button{
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+
+}
+.login-button:hover{
+    -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+
+}
+
+.text-field{
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-size: 13pt;
+    -jfx-focus-color: -fx-secondary;
+}
+.close-button-anchor{
+
+}
+.close-button-anchor:hover{
+    -fx-background-color: red;
+}
+.minimize-button-anchor:hover{
+    -fx-background-color: #50555e;
+}
+.top-anchor{
+    -fx-background-color: #24272e;
+}
+.LeftVBox{
+
+}
+.LeftVBoxTop{
+    -fx-background-color: #232529;
+}
+.LeftVBoxBottom{
+    -fx-background-color: #2b2e33;
+}
+.warningIcon{
+    -fx-fill: red;
+}

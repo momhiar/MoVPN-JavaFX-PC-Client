@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="365.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/8.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.LoginController">
+    <children>
+        <AnchorPane fx:id="topAnchor" prefHeight="30.0" prefWidth="318.0" styleClass="top-anchor">
+            <children>
+                <AnchorPane fx:id="closeButton" layoutX="281.0" prefHeight="31.0" prefWidth="37.0" styleClass="close-button-anchor">
+                    <children>
+                        <MaterialIconView glyphName="CLOSE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="minimizeButton" layoutX="245.0" prefHeight="31.0" prefWidth="37.0" styleClass="minimize-button-anchor">
+                    <children>
+                        <MaterialIconView glyphName="REMOVE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+      <BorderPane fx:id="mainPane" layoutX="-1.0" layoutY="31.0" prefHeight="336.0" prefWidth="318.0">
+         <bottom>
+            <AnchorPane prefHeight="0.0" prefWidth="318.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="270.0" prefWidth="318.0" stylesheets="@../../stylesheets/loginDarkTheme.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTextField fx:id="unameField" focusColor="#ffff0d" labelFloat="true" layoutX="69.0" layoutY="119.0" prefHeight="25.0" prefWidth="205.0" promptText="username" styleClass="text-field" unFocusColor="#d3cfcf" />
+                  <JFXPasswordField fx:id="pwdField" focusColor="#ffff0d" labelFloat="true" layoutX="69.0" layoutY="197.0" prefHeight="25.0" prefWidth="205.0" promptText="Password" styleClass="text-field" unFocusColor="#ddd7d7" />
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="146.0" layoutY="74.0" size="50" text="" wrappingWidth="26.5" />
+                  <FontAwesomeIconView glyphName="USER" layoutX="46.0" layoutY="146.0" size="20" text="" wrappingWidth="10.571428298950195" />
+                  <FontAwesomeIconView glyphName="KEY" layoutX="41.0" layoutY="223.0" size="20" />
+                  <JFXButton id="fx-button" fx:id="loginButton" layoutX="85.0" layoutY="260.0" prefHeight="37.0" prefWidth="68.0" text="Login" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="login-button" />
+                        <String fx:value="button" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton id="fx-button" fx:id="registerButton" layoutX="185.0" layoutY="260.0" prefHeight="37.0" prefWidth="68.0" text="Register" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="login-button" />
+                        <String fx:value="button" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </center></BorderPane>
+    </children>
+   <stylesheets>
+      <URL value="@../../stylesheets/loginDarkTheme.css" />
+      <URL value="@../../stylesheets/loginDarkTheme.css" />
+   </stylesheets>
+</AnchorPane>
