@@ -20,6 +20,7 @@ public class Closeable {
             stage.close();
         });
 
+
         minimizeButton.setOnMouseClicked(event -> {
             Stage stage = (Stage) closeButton.getScene().getWindow();
             stage.setIconified(true);
