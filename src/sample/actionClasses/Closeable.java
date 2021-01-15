@@ -20,9 +20,6 @@ public class Closeable {
             stage.close();
         });
 
-        minimizeButton.setOnMouseDragged(event -> {
-            //Nothing! to prevent draggability of minimizeButton
-        });
         minimizeButton.setOnMouseClicked(event -> {
             Stage stage = (Stage) closeButton.getScene().getWindow();
             stage.setIconified(true);

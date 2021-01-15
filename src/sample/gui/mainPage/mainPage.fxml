@@ -30,7 +30,7 @@
             <AnchorPane fx:id="topAnchor" layoutX="-2.0" layoutY="1.0" prefHeight="31.0" prefWidth="672.0" />
          </children>
       </AnchorPane>
-      <VBox layoutX="-2.0" layoutY="29.0" prefHeight="429.0" prefWidth="283.0" style="-fx-background-color: #ff0;" styleClass="LeftVBox">
+      <VBox layoutX="-2.0" layoutY="29.0" prefHeight="429.0" prefWidth="283.0"  styleClass="LeftVBox">
          <children>
             <AnchorPane prefHeight="202.0" prefWidth="238.0" styleClass="LeftVBoxTop">
                <children>
