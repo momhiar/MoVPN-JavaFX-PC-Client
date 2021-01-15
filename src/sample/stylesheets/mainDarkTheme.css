@@ -39,13 +39,17 @@
     -fx-font-size: 13pt;
     -jfx-focus-color: -fx-secondary;
 }
-.close-button-anchor{
 
-}
 .close-button-anchor:hover{
     -fx-background-color: red;
 }
+.close-button-anchor:pressed {
+    -fx-background-color: #f54c4c;
+}
 .minimize-button-anchor:hover{
+    -fx-background-color: #50555e;
+}
+.minimize-button-anchor:pressed{
     -fx-background-color: #50555e;
 }
 .top-anchor{

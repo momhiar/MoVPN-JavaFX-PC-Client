@@ -15,18 +15,19 @@
 
 <AnchorPane prefHeight="457.0" prefWidth="743.0" stylesheets="@../../stylesheets/mainDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.mainPageController">
    <children>
-      <AnchorPane fx:id="topAnchor" layoutY="-1.0" prefHeight="31.0" prefWidth="738.0" styleClass="top-anchor">
+      <AnchorPane layoutY="-1.0" prefHeight="31.0" prefWidth="738.0" styleClass="top-anchor">
          <children>
-            <AnchorPane fx:id="closeButton" layoutX="706.0" prefHeight="31.0" prefWidth="37.0" styleClass="close-button-anchor">
+            <AnchorPane fx:id="closeButton" layoutX="706.0" layoutY="1.0" prefHeight="31.0" prefWidth="37.0" styleClass="close-button-anchor">
                <children>
                   <MaterialIconView glyphName="CLOSE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="minimizeButton" layoutX="670.0" prefHeight="31.0" prefWidth="37.0" styleClass="minimize-button-anchor">
+            <AnchorPane fx:id="minimizeButton" layoutX="670.0" layoutY="1.0" prefHeight="31.0" prefWidth="37.0" styleClass="minimize-button-anchor">
                <children>
                   <MaterialIconView glyphName="REMOVE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
                </children>
             </AnchorPane>
+            <AnchorPane fx:id="topAnchor" layoutX="-2.0" layoutY="1.0" prefHeight="31.0" prefWidth="672.0" />
          </children>
       </AnchorPane>
       <VBox layoutX="-2.0" layoutY="29.0" prefHeight="429.0" prefWidth="283.0" style="-fx-background-color: #ff0;" styleClass="LeftVBox">
