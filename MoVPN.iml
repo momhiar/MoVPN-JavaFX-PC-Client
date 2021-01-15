@@ -7,5 +7,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="jfoenix-8.0.10" level="application" />
+    <orderEntry type="library" exported="" name="controlsfx-8.40.11" level="application" />
+    <orderEntry type="library" exported="" name="fontawesomefx-commons-8.151" level="application" />
+    <orderEntry type="library" exported="" name="fontawesomefx-fontawesome-4.7.0-5" level="application" />
+    <orderEntry type="library" exported="" name="fontawesomefx-materialicons-2.2.0-5" level="application" />
+    <orderEntry type="library" exported="" name="lib" level="application" />
+    <orderEntry type="library" exported="" name="fontawesomefx-controls-8.15" level="application" />
+    <orderEntry type="library" exported="" name="fontawesomefx-icons525-3.0.0-4" level="application" />
+    <orderEntry type="library" exported="" name="fontawesomefx-materialdesignfont-1.7.22-4" level="application" />
   </component>
 </module>

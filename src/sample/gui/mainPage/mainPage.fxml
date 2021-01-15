@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="457.0" prefWidth="743.0" stylesheets="@../../stylesheets/mainDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.mainPageController">
+<AnchorPane prefHeight="457.0" prefWidth="743.0" stylesheets="@../../stylesheets/mainDarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.mainPageController">
    <children>
       <AnchorPane layoutY="-1.0" prefHeight="31.0" prefWidth="738.0" styleClass="top-anchor">
          <children>
@@ -30,7 +30,7 @@
             <AnchorPane fx:id="topAnchor" layoutX="-2.0" layoutY="1.0" prefHeight="31.0" prefWidth="672.0" />
          </children>
       </AnchorPane>
-      <VBox layoutX="-2.0" layoutY="29.0" prefHeight="429.0" prefWidth="283.0"  styleClass="LeftVBox">
+      <VBox layoutX="-2.0" layoutY="29.0" prefHeight="429.0" prefWidth="283.0" styleClass="LeftVBox">
          <children>
             <AnchorPane prefHeight="202.0" prefWidth="238.0" styleClass="LeftVBoxTop">
                <children>
@@ -44,7 +44,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <JFXButton id="fx-button" fx:id="quickConnectButton" layoutX="25.0" layoutY="131.0" prefHeight="37.0" prefWidth="233.0" text="Quick Connect" textFill="WHITE">
+                  <JFXButton id="fx-button" fx:id="firstQuickConnectButton" layoutX="25.0" layoutY="131.0" prefHeight="37.0" prefWidth="233.0" text="Quick Connect" textFill="WHITE">
                      <styleClass>
                         <String fx:value="login-button" />
                         <String fx:value="button" />
@@ -58,7 +58,7 @@
                      <children>
                         <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
                         <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
-                        <JFXButton id="fx-button" fx:id="loginButton1" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
+                        <JFXButton id="fx-button" fx:id="firstServerButton" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
                            <styleClass>
                               <String fx:value="login-button" />
                               <String fx:value="button" />
@@ -104,12 +104,12 @@
                   <Image url="@../../images/disconnected.gif" />
                </image>
             </ImageView>
-            <Label layoutX="149.0" layoutY="293.0" text="You are not connected">
+            <Label fx:id="statusLabel" alignment="CENTER" layoutX="149.0" layoutY="293.0" text="You are not connected">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <JFXButton id="fx-button" fx:id="quickConnectButton1" layoutX="173.0" layoutY="239.0" prefHeight="37.0" prefWidth="178.0" text="Quick Connect" textFill="WHITE">
+            <JFXButton id="fx-button" fx:id="secondQuickConnectButton" layoutX="173.0" layoutY="239.0" prefHeight="37.0" prefWidth="178.0" text="Quick Connect" textFill="WHITE">
                <styleClass>
                   <String fx:value="login-button" />
                   <String fx:value="button" />
