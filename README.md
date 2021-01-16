@@ -8,7 +8,7 @@ JavaFX 8.0.12 or higher
 - jefoenix 8
 - @[fontawesomeFX  Jrady](https://github.com/Jerady/fontawesomefx-glyphsbrowser)
 - better to use IntellijIdea IDE
-### This project is not completed yet  , so wait for upcoming commits and updates
+### =This project is not completed yet  , so wait for upcoming commits and updates
 
 #### you can watch a preview of code here:
 ![MoVPN Client](https://github.com/momhiar/MoVPN-JavaFX-PC-Client/blob/master/Day6.gif?raw=true)
