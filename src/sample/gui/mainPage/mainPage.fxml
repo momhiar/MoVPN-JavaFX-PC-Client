@@ -36,8 +36,8 @@
                <children>
                   <AnchorPane layoutX="32.0" layoutY="41.0" prefHeight="25.0" prefWidth="144.0">
                      <children>
-                        <MaterialIconView glyphName="WARNING" layoutX="9.0" layoutY="20.0" size="15" styleClass="warningIcon" />
-                        <Label layoutX="26.0" layoutY="4.0" text="You are not Connected" textFill="RED">
+                        <MaterialIconView fx:id="statusIcon" glyphName="WARNING" layoutX="9.0" layoutY="20.0" size="15" styleClass="warningIcon" />
+                        <Label fx:id="topStatusLabel" layoutX="26.0" layoutY="4.0" text="You are not Connected" textFill="RED">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -50,7 +50,7 @@
                         <String fx:value="button" />
                      </styleClass>
                   </JFXButton>
-                  <Label layoutX="47.0" layoutY="73.0" prefHeight="18.0" prefWidth="129.0" text="IP: 127.0.0.1" textFill="#d3cccc" />
+                  <Label fx:id="ipLabel" layoutX="47.0" layoutY="73.0" prefHeight="18.0" prefWidth="129.0" text="IP: 127.0.0.1" textFill="#d3cccc" />
                </children></AnchorPane>
             <AnchorPane prefHeight="180.0" prefWidth="283.0" styleClass="LeftVBoxBottom">
                <children>
@@ -71,7 +71,7 @@
                      <children>
                         <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
                         <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
-                        <JFXButton id="fx-button" fx:id="loginButton11" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
+                        <JFXButton id="fx-button" fx:id="secondServerButton" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
                            <styleClass>
                               <String fx:value="login-button" />
                               <String fx:value="button" />
@@ -84,7 +84,7 @@
                      <children>
                         <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
                         <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
-                        <JFXButton id="fx-button" fx:id="loginButton12" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
+                        <JFXButton id="fx-button" fx:id="thirdServerButton" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
                            <styleClass>
                               <String fx:value="login-button" />
                               <String fx:value="button" />
