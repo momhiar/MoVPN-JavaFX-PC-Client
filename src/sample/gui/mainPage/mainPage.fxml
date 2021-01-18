@@ -70,7 +70,7 @@
                   <AnchorPane layoutX="-1.0" layoutY="61.0" prefHeight="61.0" prefWidth="283.0">
                      <children>
                         <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
-                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
+                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 2" textFill="#f2ebeb" />
                         <JFXButton id="fx-button" fx:id="secondServerButton" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
                            <styleClass>
                               <String fx:value="login-button" />
@@ -83,7 +83,7 @@
                   <AnchorPane layoutX="-1.0" layoutY="125.0" prefHeight="102.0" prefWidth="283.0">
                      <children>
                         <MaterialDesignIconView glyphName="WEB" layoutX="14.0" layoutY="37.0" size="18" />
-                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 1" textFill="#f2ebeb" />
+                        <Label layoutX="47.0" layoutY="21.0" prefHeight="18.0" prefWidth="129.0" style="-fx-text-fill: #fff;" text="Server 3" textFill="#f2ebeb" />
                         <JFXButton id="fx-button" fx:id="thirdServerButton" layoutX="201.0" layoutY="15.0" prefHeight="31.0" prefWidth="68.0" text="connect" textFill="WHITE">
                            <styleClass>
                               <String fx:value="login-button" />

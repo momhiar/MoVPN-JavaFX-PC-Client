@@ -2,14 +2,17 @@ package sample.controllers;
 
 import com.jfoenix.controls.JFXButton;
 import de.jensd.fx.glyphs.materialicons.MaterialIconView;
-import javafx.event.ActionEvent;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import sample.actionClasses.CloningButtons;
+import javafx.scene.paint.Color;
 import sample.actionClasses.Closeable;
 import sample.actionClasses.Draggable;
 
@@ -41,8 +44,6 @@ public class mainPageController implements Initializable {
     private  JFXButton secondServerButton;
     @FXML
     private  JFXButton thirdServerButton;
-
-    private JFXButton chosenServer;
     @FXML
     private MaterialIconView statusIcon;
     @FXML
@@ -50,9 +51,112 @@ public class mainPageController implements Initializable {
 
     @FXML
     private Label topStatusLabel;
+    private String status;
 
-    private  CloningButtons clonedButton;
+    private final String connectingButtonsStyle = "-fx-background-color: #FFFF0D  ; -fx-text-fill: #2A2E37";
+    private final String disConnectedButtonsStyle = "-fx-background-color: #2A2E37  ; -fx-text-fill: #B2B2B2";
+    private final String connectedButtonsStyle = "-fx-background-color: #03fc07; -fx-border-color: #03fc07; -fx-text-fill: #2A2E37 ";
+    private EventHandler setToConnecting(JFXButton chosenServer){
+        EventHandler connecting = event -> {
+            setToDisconnected().handle(event);
+            statusImage.setImage(new Image("/sample/images/connecting.gif"));
+            firstQuickConnectButton.setText("Now Connecting...");
+            secondQuickConnectButton.setText("Now Connecting...");
+            statusLabel.setText("Now Connecting...");
+            firstQuickConnectButton.setStyle(connectingButtonsStyle);
+            secondQuickConnectButton.setStyle(connectingButtonsStyle);
+            chosenServer.setStyle(connectingButtonsStyle);
+            chosenServer.setText("Connecting");
+            topStatusLabel.setText("You are now Connecting");
+            statusIcon.setGlyphName("WARNING");
+            statusIcon.setFill(Color.web("#ff0"));
 
+            status = "connecting";
+
+            firstServerButton.setOnAction(null);
+            secondServerButton.setOnAction(null);
+            thirdServerButton.setOnAction(null);
+
+            chosenServer.setOnAction(setToDisconnected());
+            firstQuickConnectButton.setOnAction(setToDisconnected());
+            secondQuickConnectButton.setOnAction(setToDisconnected());
+
+
+            Task setToConnected = new Task() {
+                @Override
+                protected Object call() throws Exception {
+
+
+                    Thread.sleep(2000);
+                    if (status.equals("connecting")){
+                        Platform.runLater(() -> setToConnected(chosenServer));
+                    }
+
+
+                    return null;
+                }
+            };
+            new Thread(setToConnected).start();
+        };
+        return connecting;
+
+    }
+    private void setToConnected(JFXButton chosenServer){
+
+                statusImage.setImage(new Image("/sample/images/connected.gif"));
+                chosenServer.setText("Connected");
+                firstQuickConnectButton.setText("Connected");
+                secondQuickConnectButton.setText("Connected");
+                statusLabel.setText("You are now Connected");
+                chosenServer.setStyle(connectedButtonsStyle );
+                firstQuickConnectButton.setStyle(connectedButtonsStyle);
+                secondQuickConnectButton.setStyle(connectedButtonsStyle);
+                firstServerButton.setOnAction(setToConnecting(firstServerButton));
+                secondServerButton.setOnAction(setToConnecting(secondServerButton));
+                thirdServerButton.setOnAction(setToConnecting(thirdServerButton));
+                chosenServer.setOnAction(setToDisconnected());
+                status = "connected";
+                ipLabel.setText("IP: 192.16.1.1");
+                topStatusLabel.setText("You are now Connected");
+                statusIcon.setGlyphName("CHECK_CIRCLE");
+                statusIcon.setFill(Color.web("#03fc07"));
+            }
+
+    private EventHandler setToDisconnected(){
+
+        EventHandler setToDisConnected = new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                statusImage.setImage(new Image("/sample/images/disconnected.gif"));
+                secondQuickConnectButton.setText("Quick Connect");
+                firstQuickConnectButton.setText("Quick Connect");
+                statusLabel.setText("You are not connected");
+                firstQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
+                secondQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
+                firstServerButton.setOnAction(setToConnecting(firstServerButton));
+                secondServerButton.setOnAction(setToConnecting(secondServerButton));
+                thirdServerButton.setOnAction(setToConnecting(thirdServerButton));
+                firstQuickConnectButton.setStyle(disConnectedButtonsStyle);
+                secondQuickConnectButton.setStyle(disConnectedButtonsStyle);
+                firstServerButton.setStyle(disConnectedButtonsStyle);
+                secondServerButton.setStyle(disConnectedButtonsStyle);
+                thirdServerButton.setStyle(disConnectedButtonsStyle);
+                firstServerButton.setText("Connect");
+                secondServerButton.setText("Connect");
+                thirdServerButton.setText("Connect");
+                status = "disconnected";
+                topStatusLabel.setText("You are not Connected");
+                statusIcon.setGlyphName("WARNING");
+                statusIcon.setFill(Color.RED);
+                ipLabel.setText("IP:127.0.0.1");
+
+
+            }
+        };
+
+
+        return  setToDisConnected;
+    }
 
 
     @Override
@@ -60,6 +164,12 @@ public class mainPageController implements Initializable {
 
         new Draggable(topAnchor).draggable();
         new Closeable(closeButton , minimizeButton).closeAble();
+        firstQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
+        secondQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
+        firstServerButton.setOnAction(setToConnecting(firstServerButton));
+        secondServerButton.setOnAction(setToConnecting(secondServerButton));
+        thirdServerButton.setOnAction(setToConnecting(thirdServerButton));
+
 
 
 
