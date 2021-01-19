@@ -54,7 +54,7 @@ public class mainPageController implements Initializable {
     private String status;
 
     private final String connectingButtonsStyle = "-fx-background-color: #FFFF0D  ; -fx-text-fill: #2A2E37";
-    private final String disConnectedButtonsStyle = "-fx-background-color: #2A2E37  ; -fx-text-fill: #B2B2B2";
+    private final String disConnectedButtonsStyle = "";
     private final String connectedButtonsStyle = "-fx-background-color: #03fc07; -fx-border-color: #03fc07; -fx-text-fill: #2A2E37 ";
     private EventHandler setToConnecting(JFXButton chosenServer){
         EventHandler connecting = event -> {
@@ -127,29 +127,7 @@ public class mainPageController implements Initializable {
         EventHandler setToDisConnected = new EventHandler() {
             @Override
             public void handle(Event event) {
-                statusImage.setImage(new Image("/sample/images/disconnected.gif"));
-                secondQuickConnectButton.setText("Quick Connect");
-                firstQuickConnectButton.setText("Quick Connect");
-                statusLabel.setText("You are not connected");
-                firstQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
-                secondQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
-                firstServerButton.setOnAction(setToConnecting(firstServerButton));
-                secondServerButton.setOnAction(setToConnecting(secondServerButton));
-                thirdServerButton.setOnAction(setToConnecting(thirdServerButton));
-                firstQuickConnectButton.setStyle(disConnectedButtonsStyle);
-                secondQuickConnectButton.setStyle(disConnectedButtonsStyle);
-                firstServerButton.setStyle(disConnectedButtonsStyle);
-                secondServerButton.setStyle(disConnectedButtonsStyle);
-                thirdServerButton.setStyle(disConnectedButtonsStyle);
-                firstServerButton.setText("Connect");
-                secondServerButton.setText("Connect");
-                thirdServerButton.setText("Connect");
-                status = "disconnected";
-                topStatusLabel.setText("You are not Connected");
-                statusIcon.setGlyphName("WARNING");
-                statusIcon.setFill(Color.RED);
-                ipLabel.setText("IP:127.0.0.1");
-
+                setDefault();
 
             }
         };
@@ -158,17 +136,45 @@ public class mainPageController implements Initializable {
         return  setToDisConnected;
     }
 
+    private void setDefault(){
+        //set image to default
+        statusImage.setImage(new Image("/sample/images/disconnected.gif"));
+        //set texts
+        secondQuickConnectButton.setText("Quick Connect");
+        firstQuickConnectButton.setText("Quick Connect");
+        statusLabel.setText("You are not connected");
+        firstServerButton.setText("Connect");
+        secondServerButton.setText("Connect");
+        thirdServerButton.setText("Connect");
+        status = "disconnected";
+        ipLabel.setText("IP:127.0.0.1");
+        //reset actions
+        firstQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
+        secondQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
+        firstServerButton.setOnAction(setToConnecting(firstServerButton));
+        secondServerButton.setOnAction(setToConnecting(secondServerButton));
+        thirdServerButton.setOnAction(setToConnecting(thirdServerButton));
+
+        //reset Buttons styles
+        firstQuickConnectButton.setStyle(disConnectedButtonsStyle);
+        secondQuickConnectButton.setStyle(disConnectedButtonsStyle);
+        firstServerButton.setStyle(disConnectedButtonsStyle);
+        secondServerButton.setStyle(disConnectedButtonsStyle);
+        thirdServerButton.setStyle(disConnectedButtonsStyle);
+
+        //top status bar
+        topStatusLabel.setText("You are not Connected");
+        statusIcon.setGlyphName("WARNING");
+        statusIcon.setFill(Color.RED);
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         new Draggable(topAnchor).draggable();
         new Closeable(closeButton , minimizeButton).closeAble();
-        firstQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
-        secondQuickConnectButton.setOnAction(setToConnecting(firstServerButton));
-        firstServerButton.setOnAction(setToConnecting(firstServerButton));
-        secondServerButton.setOnAction(setToConnecting(secondServerButton));
-        thirdServerButton.setOnAction(setToConnecting(thirdServerButton));
+
+        setDefault();
 
 
 

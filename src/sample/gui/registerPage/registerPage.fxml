@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="457.0" prefWidth="743.0" stylesheets="@../../stylesheets/mainDarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.RegisterPageController">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="31.0" prefWidth="738.0" styleClass="top-anchor">
+            <children>
+                <AnchorPane fx:id="closeButton" layoutX="706.0" layoutY="1.0" prefHeight="31.0" prefWidth="37.0" styleClass="close-button-anchor">
+                    <children>
+                        <MaterialIconView glyphName="CLOSE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="minimizeButton" layoutX="670.0" layoutY="1.0" prefHeight="31.0" prefWidth="37.0" styleClass="minimize-button-anchor">
+                    <children>
+                        <MaterialIconView glyphName="REMOVE" layoutX="9.0" layoutY="25.0" size="18" wrappingWidth="20.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="topAnchor" layoutX="-2.0" layoutY="1.0" prefHeight="31.0" prefWidth="672.0" />
+            </children>
+        </AnchorPane>
+      <JFXTextField fx:id="fnameField" focusColor="#ffff0d" labelFloat="true" layoutX="83.0" layoutY="87.0" prefHeight="38.0" prefWidth="240.0" promptText="Firstname" styleClass="text-field" unFocusColor="#d3cfcf" />
+      <FontAwesomeIconView glyphName="USER" layoutX="60.0" layoutY="114.0" size="20" text="" wrappingWidth="10.571428298950195" />
+      <JFXTextField fx:id="lnameField" focusColor="#ffff0d" labelFloat="true" layoutX="423.0" layoutY="87.0" prefHeight="38.0" prefWidth="240.0" promptText="Lastname" styleClass="text-field" unFocusColor="#d3cfcf" />
+      <FontAwesomeIconView glyphName="USER" layoutX="400.0" layoutY="114.0" size="20" text="" wrappingWidth="10.571428298950195" />
+      <JFXTextField fx:id="emailField" focusColor="#ffff0d" labelFloat="true" layoutX="83.0" layoutY="164.0" prefHeight="38.0" prefWidth="240.0" promptText="Email" styleClass="text-field" unFocusColor="#d3cfcf" />
+      <FontAwesomeIconView glyphName="USER" layoutX="60.0" layoutY="191.0" size="20" text="" wrappingWidth="10.571428298950195" />
+      <JFXTextField fx:id="unameField" focusColor="#ffff0d" labelFloat="true" layoutX="423.0" layoutY="164.0" prefHeight="38.0" prefWidth="240.0" promptText="Username" styleClass="text-field" unFocusColor="#d3cfcf" />
+      <FontAwesomeIconView glyphName="USER" layoutX="400.0" layoutY="191.0" size="20" text="" wrappingWidth="10.571428298950195" />
+      <JFXPasswordField fx:id="pwdField" focusColor="#ffff0d" labelFloat="true" layoutX="88.0" layoutY="260.0" prefHeight="38.0" prefWidth="240.0" promptText="Password" styleClass="text-field" unFocusColor="#ddd7d7" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="60.0" layoutY="286.0" size="20" />
+      <JFXPasswordField fx:id="rpwdField" focusColor="#ffff0d" labelFloat="true" layoutX="428.0" layoutY="260.0" prefHeight="38.0" prefWidth="240.0" promptText="Re-type Password" styleClass="text-field" unFocusColor="#ddd7d7" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="400.0" layoutY="286.0" size="20" />
+      <JFXCheckBox fx:id="termsCheckBox" checkedColor="#ffff0d" layoutX="70.0" layoutY="335.0" text="I'm agree with" />
+      <Hyperlink layoutX="171.0" layoutY="333.0" style="-fx-text-fill: #261cd3;" text="terms of use" textFill="#261cd3" wrapText="true" />
+      <JFXButton id="fx-button" fx:id="registerButton" layoutX="245.0" layoutY="377.0" prefHeight="37.0" prefWidth="119.0" text="Register" textFill="WHITE">
+         <styleClass>
+            <String fx:value="login-button" />
+            <String fx:value="button" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton id="fx-button" fx:id="cancelButton" layoutX="405.0" layoutY="377.0" prefHeight="37.0" prefWidth="119.0" text="Cancel" textFill="WHITE">
+         <styleClass>
+            <String fx:value="login-button" />
+            <String fx:value="button" />
+         </styleClass>
+      </JFXButton>
+    </children>
+</AnchorPane>

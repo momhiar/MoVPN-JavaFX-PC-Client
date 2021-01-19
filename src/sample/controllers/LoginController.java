@@ -4,15 +4,23 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.concurrent.Task;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import sample.actionClasses.Closeable;
 import sample.actionClasses.Draggable;
 import sample.actionClasses.SetMain;
+
+import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -73,11 +81,26 @@ public class LoginController implements Initializable {
         });
         //TODO:Configure register Button
         registerButton.setOnAction(event -> {
-            //TODO: we need to make a register page and make this button activate
+            Stage primaryStage = (Stage) registerButton.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/gui/registerPage/registerPage.fxml")) ;
 
-
-
-
+        Stage stage = new Stage();
+            try {
+                stage.setScene(new Scene(loader.load()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.show();
+            primaryStage.hide();
+            RegisterPageController registerPageController = loader.getController();
+            registerPageController.setCancelButtonAction(new EventHandler() {
+                @Override
+                public void handle(Event event) {
+                    stage.close();
+                    primaryStage.show();
+                }
+            });
 
         });
 
