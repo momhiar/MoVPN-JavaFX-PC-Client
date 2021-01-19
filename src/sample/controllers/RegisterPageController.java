@@ -67,7 +67,7 @@ public class RegisterPageController implements Initializable {
         registerButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("wtf?");
+
             }
         });
     }
